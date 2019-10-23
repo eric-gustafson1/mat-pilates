@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" /> -->
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilates in the Ranch</title>
+  </head>
+
+  <body>
+    <header class="main-header">
+      <div class="primary-overlay">
+        <div class="navbar-fixed">
+          <nav class="transparent">
+            <div class="container">
+              <div class="nav-wrapper">
+                <a href="#home" class="brand-logo">Pilates in the Ranch</a>
+                <a href="#" data-activates="mobile-nav" class="button-collapse">
+                  <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                  <li>
+                    <a href="#home">Home</a>
+                  </li>
+                  <li>
+                    <a href="#about">About</a>
+                  </li>
+                  <li>
+                    <a href="#testimonials">Testimonials</a>
+                  </li>
+                  <li>
+                    <a href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- Side nav -->
+        <ul class="side-nav" id="mobile-nav">
+          <h4 class="blue-grey darken-3 center">BizLand</h4>
+          <li>
+            <a class="divider"></a>
+          </li>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#testimonials">Testimonials</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <!-- Showcase -->
+        <div class="showcase container">
+          <div class="row">
+            <div class="col s12 main-text">
+              <!-- <h5>You found...</h5> -->
+              <h1>Pilates in the Ranch</h1>
+              <p class="flow-text">Pilates with friends and neighbors</p>
+              <br />
+              <a href="#about" class="btn btn-large white black-text">Learn More</a>
+              <a href="#contact" class="white-text">
+                <i class="material-icons medium scroll-icon">arrow_drop_down_circle</i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sections -->
+    <section class="section-boxes center">
+      <div class="row">
+        <div class="col s12 m6 l3 blue white-text box">
+          <i class="material-icons medium">show_chart</i>
+          <h4>Grow Your Business</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum beatae voluptates inventore explicabo repellat ducimus odio minus veritatis
+            animi saepe.
+          </p>
+        </div>
+
+        <div class="col s12 m6 l3 purple white-text box">
+          <i class="material-icons medium">people</i>
+          <h4>Professional Advisors</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum beatae voluptates inventore explicabo repellat ducimus odio minus veritatis
+            animi saepe.
+          </p>
+        </div>
+
+        <div class="col s12 m6 l3 teal white-text box">
+          <i class="material-icons medium">verified_user</i>
+          <h4>Secure Your Company</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum beatae voluptates inventore explicabo repellat ducimus odio minus veritatis
+            animi saepe.
+          </p>
+        </div>
+
+        <div class="col s12 m6 l3 amber darken-4 white-text box">
+          <i class="material-icons medium">account_balance</i>
+          <h4>Multiply Your Income</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum beatae voluptates inventore explicabo repellat ducimus odio minus veritatis
+            animi saepe.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Init Sidenav
+        $(".button-collapse").sideNav();
+
+        // ScrollFire
+        const options = [
+          {
+            selector: ".main-text",
+            offset: 0,
+            callback: function(element) {
+              Materialize.fadeInImage($(element));
+            }
+          },
+          {
+            selector: ".navbar-fixed",
+            offset: 1100,
+            callback: function() {
+              $("nav")
+                .removeClass("transparent")
+                .addClass("blue-grey darken-3");
+            }
+          }
+        ];
+        Materialize.scrollFire(options);
+      });
+    </script>
+  </body>
+</html>
